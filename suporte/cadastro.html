@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>GESTÃO</title>
+
+</head>
+
+<body onload="listarUsuarios()">
+
+    <header>
+        <div class="container text-center">
+            <h1>SUPORTE AO USUÁRIO</h1>
+            <a href="gestao.html">
+                <div class="d-grid gap-2">
+                    <button type="button" data-bs-toggle="button" aria-pressed="true">GESTÃO DE USUÁRIOS</button>
+                </div>
+            </a>
+        </div>
+    </header>
+    
+
+</header>
+    
+    
+    
+    </a>
+    <hr>
+    <h2>Cadastro de usuários</h2>
+    <form id="formulario" method="post" onsubmit="enviarDados(event)">
+        <label for="nome">Nome completo: </label>
+        <input type="text" name="nome" id="nome" placeholder="Digite aqui ..." required /><br><br> 
+        <label for="setor">Setor: </label>
+        <input type="text" name="setor" id="setor" placeholder="Digite o setor que trabalha..." required><br><br>
+        <label for="descricao">Descrição: </label>
+        <input type="textarea" name="descricao" id="descricao" placeholder="Descrição do prblema..." required><br><br>
+        <label for="data">Data: </label>
+        <input type="date" name="dataHoje" id="dataHoje" required><br><br>
+        <label for="cpf">Insira o CPF: </label>
+        <input type="text" name="cpf" id="cpf" placeholder="Somente números ..." maxlength="11" required onblur="validaCPF()" /><br><br>
+        <button type="submit">CADASTRAR</button>
+    </form>
+    <br>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
